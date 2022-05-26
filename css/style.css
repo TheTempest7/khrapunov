@@ -95,8 +95,8 @@
   height: 0;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-top: 10px solid #616161;
-  border-bottom: 0px solid #616161;
+  border-top: 0px solid #1672EC;
+  border-bottom: 10px solid #1672EC;
 }
 
 .secondSelect__body {
@@ -152,7 +152,7 @@
   height: 0;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-bottom: 10px solid #616161;
+  border-top: 10px solid #616161;
   transition: all 0.8s ease 0.3s;
   -webkit-transition: all 0.8s ease 0.3s;
   -moz-transition: all 0.8s ease 0.3s;
@@ -241,6 +241,13 @@
   -moz-transform: translate(-2px, 0px);
   -ms-transform: translate(-2px, 0px);
   -o-transform: translate(-2px, 0px);
+}
+.selected .secondSelect__labelText {
+  margin-left: 16px;
+}
+.selected .secondSelect__labelText .secondSelect__discription {
+  opacity: 1;
+  visibility: visible;
 }
 
 /*============================================(right-side pick)============================*/
@@ -405,7 +412,7 @@
 
 /*---------------------(last big table form)--------*/
 .downside__amentites {
-  margin-top: 40px;
+  margin: 40px 0px;
 }
 
 .amenities__body {
@@ -471,6 +478,20 @@
 
 .amenities__input {
   position: relative;
+  transition: all 0.8s ease 0.2s;
+  -webkit-transition: all 0.8s ease 0.2s;
+  -moz-transition: all 0.8s ease 0.2s;
+  -ms-transition: all 0.8s ease 0.2s;
+  -o-transition: all 0.8s ease 0.2s;
+}
+.amenities__input svg {
+  opacity: 1;
+  visibility: visible;
+}
+
+.amenities__input:focus svg {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .amenities__input-bar {
@@ -478,6 +499,14 @@
   height: 40px;
   border: 1px solid #E0E0E0;
   border-radius: 8px;
+  padding-left: 48px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.0168em;
+  color: #818181;
 }
 
 .amenities__input-bar::placeholder {
@@ -488,7 +517,6 @@
   line-height: 150%;
   letter-spacing: 0.0168em;
   color: #818181;
-  padding-left: 48px;
 }
 
 .amenities__svg {
@@ -551,6 +579,9 @@
   -ms-transform: translate(-2px, 0px);
   -o-transform: translate(-2px, 0px);
 }
+.selected .amenities__labelText {
+  margin-left: 16.5px;
+}
 
 .amenities__labelText {
   margin-left: 21px;
@@ -558,4 +589,91 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.amenities__underCheck-body {
+  margin-top: 8px;
+  background: #FFFFFF;
+  padding: 21px 25px 0px 25px;
+  width: 240px;
+  transition: all 0.8s ease 0.3s;
+  -webkit-transition: all 0.8s ease 0.3s;
+  -moz-transition: all 0.8s ease 0.3s;
+  -ms-transition: all 0.8s ease 0.3s;
+  -o-transition: all 0.8s ease 0.3s;
+}
+
+.amenities__checkboxUnder:not(:last-child) {
+  margin-bottom: 33px;
+}
+
+.amenities__checkboxUnder {
+  display: flex;
+  align-items: center;
+}
+
+.amenities__inputChUnder {
+  display: none;
+}
+
+.selected .amenities__markUnder {
+  background-color: #0F56B3;
+  border-radius: 4px;
+  border: 5px solid rgba(197, 220, 250, 0.5);
+  width: 27px;
+  height: 27px;
+  transform: translate(-2px, 0px);
+  -webkit-transform: translate(-2px, 0px);
+  -moz-transform: translate(-2px, 0px);
+  -ms-transform: translate(-2px, 0px);
+  -o-transform: translate(-2px, 0px);
+}
+.selected .amenities__labelTextUnder {
+  margin-left: 16.5px;
+}
+
+.amenities__markUnder {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #818181;
+  position: relative;
+  border-radius: 4px;
+  transition: all 0.8s ease 0.2s;
+  -webkit-transition: all 0.8s ease 0.2s;
+  -moz-transition: all 0.8s ease 0.2s;
+  -ms-transition: all 0.8s ease 0.2s;
+  -o-transition: all 0.8s ease 0.2s;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.amenities__labelTextUnder {
+  margin-left: 21px;
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  white-space: nowrap;
+}
+.amenities__labelTextUnder a {
+  display: contents;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.0168em;
+  color: #1672EC;
+}
+
+.amenities__devide {
+  margin-top: -23px;
+  width: 436px;
+  height: 1px;
+  background-color: #E0E0E0;
 }
